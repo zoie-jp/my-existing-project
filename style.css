@@ -19,8 +19,6 @@ button {
   margin: 20px auto;
   background-color: #51b2a8;
   padding: 15px 20px;
-
-
 }
 .time-zone {
   position: absolute;
@@ -44,7 +42,7 @@ li {
   height: 19px;
   line-height: 1;
   list-style: none;
-  margin:0 0 10px;
+  margin: 0 0 10px;
 }
 
 .weather {
@@ -57,7 +55,7 @@ li {
   margin-bottom: 6px;
   margin-top: 0px;
 }
-.btn{
+.btn {
   margin-bottom: 6px;
   margin-top: 0px;
 }
@@ -95,4 +93,13 @@ div.circle {
   left: 15px;
 }
 
-
+.source {
+  display: block;
+  margin: 0 auto;
+  text-align-last: center;
+}
+.by {
+  display: block;
+  margin: 0 auto;
+  text-align-last: center;
+}
