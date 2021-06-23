@@ -36,11 +36,10 @@ function getCurrentLocation(event) {
 }
 function currentWeather(response) {
   console.log(response.data);
-
+let iconElement = document.querySelector("#icon");
+celciusTemp = response.data.main.temp;
   document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  document.querySelector("#temperature").innerHTML = Math.round(celciusTemp);
   document.querySelector("#feel").innerHTML = Math.round(
     response.data.main.feels_like
   );
@@ -63,10 +62,33 @@ function search(event) {
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(url).then(currentWeather);
 }
+function showFahrenheitTemp(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#temperature");
+  celLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemp = (celciusTemp * 9) / 5 + 32;
 
+  tempElement.innerHTML = Math.round(fahrenheitTemp);
+}
+function showCelTemp(event) {
+  event.preventDefault();
+
+  let tempElement = document.querySelector("#temperature");
+  celLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  tempElement.innerHTML = Math.round(celciusTemp);
+}
 let searchCity = document.querySelector("#search-city");
 searchCity.addEventListener("submit", search);
 
 let currentButton = document.querySelector("#current-location");
 currentButton.addEventListener("click", getCurrentLocation);
-let iconElement = document.querySelector("#icon");
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheitTemp);
+
+let celLink = document.querySelector("#cel-link");
+celLink.addEventListener("click", showCelTemp);
+
+let celciusTemp=null;
