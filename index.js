@@ -1,4 +1,3 @@
-///1
 let now = new Date();
 let h2 = document.querySelector("#time");
 let hours = now.getHours();
@@ -49,7 +48,12 @@ function currentWeather(response) {
     response.data.main.humidity
   );
   document.querySelector("#condition").innerHTML =
-    response.data.weather[0].main;
+    response.data.weather[0].description;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 function search(event) {
   event.preventDefault();
@@ -65,6 +69,4 @@ searchCity.addEventListener("submit", search);
 
 let currentButton = document.querySelector("#current-location");
 currentButton.addEventListener("click", getCurrentLocation);
-///3
-
-///w5.1
+let iconElement = document.querySelector("#icon");
