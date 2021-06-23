@@ -36,16 +36,16 @@ function getCurrentLocation(event) {
 }
 function currentWeather(response) {
   console.log(response.data);
-let iconElement = document.querySelector("#icon");
-celciusTemp = response.data.main.temp;
+  let iconElement = document.querySelector("#icon");
+  celciusTemp = response.data.main.temp;
+
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(celciusTemp);
   document.querySelector("#feel").innerHTML = Math.round(
     response.data.main.feels_like
   );
-  document.querySelector("#humid").innerHTML = Math.round(
-    response.data.main.humidity
-  );
+
+  document.querySelector("#humid").innerHTML = response.data.main.humidity;
   document.querySelector("#condition").innerHTML =
     response.data.weather[0].description;
   iconElement.setAttribute(
@@ -91,4 +91,4 @@ fahrenheitLink.addEventListener("click", showFahrenheitTemp);
 let celLink = document.querySelector("#cel-link");
 celLink.addEventListener("click", showCelTemp);
 
-let celciusTemp=null;
+let celciusTemp = null;
