@@ -16,10 +16,7 @@
 <body>
   
     <div class="container">
-    <h1>
-        <span id="city">Stockholm</span
-          >
-        </h1>
+     <h1 id="city"></h1>
         <div class="Temp" >
             <a href="#" id="cel-link" class="active">°C </a> | 
             <a href="#"id="fahrenheit-link" class="f-active">°F</a>
@@ -35,8 +32,7 @@
           }@2x.png"
           alt=""
           id="icon"
-          width="42"
-        />
+          />
           <p>
 
       <div class="weather" id="condition">Light rain showers</div>
@@ -101,67 +97,37 @@
 </div>
 <hr>
 
-<div class="forecast">
+<div class="forecast-title">
     Daily Forecast
 
 </div>
-<br />
 
-<div class="row">
-    
+<br />
+<div class="weather-forecast" id="forecast">
+ 
     <div class="col-2">
+ <div class="forecast-day">fri</div>
+  
+<img 
+src="http://openweathermap.org/img/wn/02d@2x.png" alt=""
+width="42"/>
 
-  <div class="circle">8
-<br />
--1
+  <div class="temp-forecast">
+  <span class="circle">
+    <span class="forecast-max">4°</span>
+
+<span class="forecast-min">1</span>
 
   </div>
+ </div>
+ </div>
 </div>
-<div class="col-2">
-    <div class="circle">
-      12
-    <br /> 
-  -2
-</div>
-</div>
-<div class="col-2">    
-<div class="circle">10
-<br /> 
-2
-    </div>
-</div>
-<div class="col-2">
-    <div class="circle">16 
-<br />
--6
-    </div>
-</div>
-<div class="col-2">
-    <div class="circle">18 
-      <br />
-7
-    </div>
-</div>
-<div class="col-2">
-    <div class="circle">15 
-<br />
-6
-    </div>
-  </div>
-  </div>
+
+
+
+  
+
   <br />
-<div class="days">
-<div class="row">
-    <div class="col-2">Fri</div>
-    <div class="col-2">Sat</div>
-    <div class="col-2">Sun</div>
-    <div class="col-2">Mon</div>
-    <div class="col-2">Tus</div>
-    <div class="col-2">Wed</div>
-</div>
-</div>
-
-<hr>
 
 
 </div>

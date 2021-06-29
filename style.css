@@ -69,29 +69,31 @@ div.degree {
   position: relative;
   left: 15px;
 }
-.forecast {
+.forecast-title {
   color: #51b2a8;
   font-size: 20px;
 }
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+}
+.forecast-day {
+  font-size: 16px;
+  color: black;
+}
 .circle {
-  height: 50px;
-  width: 50px;
+  height: 90px;
+  width: 60px;
   background-color: #e3f5f4;
   border: 2px solid #51b2a8;
   border-radius: 50%;
   font-size: 15px;
-  text-align: center;
+ 
 }
 div.circle {
   color: #5a6275;
 }
-.days {
-  color: #212529;
-  display: block;
-  margin: 5 auto;
-  position: relative;
-  left: 15px;
-}
+
 
 .source {
   display: block;
