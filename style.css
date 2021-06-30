@@ -13,6 +13,7 @@ h1 {
   color: #51b2a8;
   margin-top: 120px;
   position: relative;
+  font-size: 35px;
 }
 button {
   display: block;
@@ -24,6 +25,7 @@ button {
   position: absolute;
   top: 55px;
   left: 400px;
+  font-size: 25px;
 }
 
 .Temp {
@@ -62,30 +64,23 @@ li {
 .time-zone {
   color: #939aa9;
 }
-div.time-degree {
-  color: #212529;
-}
-div.degree {
-  position: relative;
-  left: 15px;
-}
-.forecast-title {
-  color: #51b2a8;
-  font-size: 20px;
-}
+
 .weather-forecast {
   margin-top: 20px;
   text-align: center;
+}
+.weather:first-letter {
+  text-transform: capitalize;
 }
 .forecast-day {
   font-size: 16px;
   color: black;
 }
 .circle {
-  height: 90px;
+  height: 60px;
   width: 60px;
   background-color: #e3f5f4;
-  border: 2px solid #51b2a8;
+  border: 2px solid #85c7c0;
   border-radius: 50%;
   font-size: 15px;
  

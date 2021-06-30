@@ -25,7 +25,7 @@
         </div>
         <div class="weather-forecast-date">
 
-        </div class="weather-icon">
+        </div class="icon">
         <img
          src="http://openweathermap.org/img/wn/${
             icon.weather[0].icon
@@ -39,8 +39,8 @@
     </p>
     <div class="col-6"> 
         <ul>
-            <li>Humidity: <span id="humid"></span></li>
-                    <li>Fells like: <span id="feel"></span></li>
+            <li>Humidity: <span id="humid"></span>%</li>
+                    <li>Fells like: <span id="feel"></span>Km/h</li>
                       </ul>
         </div>
    
@@ -49,7 +49,7 @@
   <form class="city-search" id="search-city">
    <div class="row">
      <div class="col-6" id="search-input">
-    <input type="search" placeholder="type a city.." class="form-control" id="city-name" />
+    <input type="search" placeholder="type a city.." class="form-control" id="city-name"/>
   </div>
   <div class="col-3">
     <input type="submit" value="search" class="form-control btn btn-warning"/>
@@ -70,39 +70,11 @@
 <h2 class="time-zone" id="time">
     Thursday 12:00
 </h2>
-<hr>
 
-<div class="time-degree">
-  <div class="time">
-<div class="row by-time">
-<div class="col-2">Now</div>
-<div class="col-2">1 Pm</div>
-<div class="col-2">2 Pm</div>
-<div class="col-2">3 pm</div>
-<div class="col-2">4 Pm</div>
-<div class="col-2">5 Pm</div>
-</div>
-<br />
-</div>
-<div class="degree">
-<div class="row by-degree">
-<div class="col-2">4°</div>
-<div class="col-2">4°</div>
-<div class="col-2">5°</div>
-<div class="col-2">4°</div>
-<div class="col-2">5°</div>
-<div class="col-2">4°</div>
-</div>
-</div>
-</div>
-<hr>
 
-<div class="forecast-title">
-    Daily Forecast
-
-</div>
 
 <br />
+<hr>
 <div class="weather-forecast" id="forecast">
  
     <div class="col-2">
